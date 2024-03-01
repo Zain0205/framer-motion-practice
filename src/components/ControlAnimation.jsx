@@ -15,7 +15,7 @@ function ControlAnimation() {
 
   return (
     <div className="h-screen bg-black flex items-center flex-col justify-center">
-      <Button onClick={handleClick}>Flip Animation</Button>
+      <Button onClick={handleClick}>Flip The Box</Button>
 
       <motion.div
         variants={{
