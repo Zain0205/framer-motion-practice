@@ -1,14 +1,15 @@
-import { useState } from "react";
 import Button from "./Button";
 import { motion, useAnimationControls } from "framer-motion";
 
 function ControlAnimation() {
-  const [isFliped, setIsFliped] = useState(false)
   const control = useAnimationControls()
 
   const handleClick = () => {
-    control.start(!isFliped ? "flip" : "back")
-    setIsFliped(!isFliped)
+    control.start("flip")
+  }
+
+  const handleBack = () => {
+    control.start("back")
   }
 
 
@@ -16,6 +17,7 @@ function ControlAnimation() {
   return (
     <div className="h-screen bg-black flex items-center flex-col justify-center">
       <Button onClick={handleClick}>Flip The Box</Button>
+      <Button onClick={handleBack}>Test</Button>
 
       <motion.div
         variants={{
